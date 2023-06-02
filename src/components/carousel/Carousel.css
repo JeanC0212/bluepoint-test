@@ -1,0 +1,24 @@
+.colCarousel{
+    height: 700px;
+}
+
+.carouselContent{
+    height: 50vh;
+}
+.imgCarousel{
+    margin: 10px 10px;
+    border-radius: 50%;
+    height: 350px;
+    width: 350px;
+    border: 2px solid white;
+}
+.imgCarousel2 {
+    margin: 10px 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: absolute;
+    z-index: 1;
+    top: 177px;
+    right: 300px;
+    
+}
