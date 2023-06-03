@@ -6,11 +6,11 @@ import { Carousel } from "../components/carousel/Carousel";
 export const Home = () => {
 	return (
 		<div>
-			<Carousel
+			{/* <Carousel
 				bgColor="red"
 				title="With NAVI you can..."
 				description="Experience the power of mobile messaging for faster, more accurate communication to improve the patient experience."
-			/>
+			/> */}
 
 			<SectionGrid
 				bgImage="https://static.wixstatic.com/media/c86aa8_358f73285afd482195e23f9e02bbc0a9~mv2.jpg/v1/fill/w_1550,h_537,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c86aa8_358f73285afd482195e23f9e02bbc0a9~mv2.jpg"
