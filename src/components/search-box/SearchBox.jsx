@@ -21,9 +21,9 @@ export const SearchBox = ({ setSelectedPosition }) => {
 	};
 
 	return (
-		<div style={{ display: "flex", flexDirection: "column" }}>
-			<div style={{ display: "flex" }}>
-				<div style={{ flex: "1" }}>
+		<div class="container">
+			<div class="row">
+				<div class="col-10">
 					<OutlinedInput
 						style={{ width: "100%" }}
 						value={searchText}
@@ -31,9 +31,7 @@ export const SearchBox = ({ setSelectedPosition }) => {
 						placeholder="Search a location"
 					/>
 				</div>
-				<div
-					style={{ display: "flex", alignItems: "center", padding: "0px 20px" }}
-				>
+				<div class="col-2">
 					<Button
 						variant="contained"
 						onClick={() => {
@@ -56,18 +54,20 @@ export const SearchBox = ({ setSelectedPosition }) => {
 					</Button>
 				</div>
 			</div>
-			<div>
-				<nav aria-label="main mailbox folders">
-					{listPlace.map((place, index) => {
-						return (
-							<ListPlace
-								setSelectedPosition={setSelectedPosition}
-								place={place}
-								key={index}
-							/>
-						);
-					})}
-				</nav>
+			<div class="row">
+				<div class="col">
+					<nav aria-label="main mailbox folders">
+						{listPlace.map((place, index) => {
+							return (
+								<ListPlace
+									setSelectedPosition={setSelectedPosition}
+									place={place}
+									key={index}
+								/>
+							);
+						})}
+					</nav>
+				</div>
 			</div>
 		</div>
 	);
