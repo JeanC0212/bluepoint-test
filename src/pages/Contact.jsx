@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Maps } from "../components/maps/Maps";
 import { SearchBox } from "../components/search-box/SearchBox";
+import { SocialNetwork } from "../components/social-network/SocialNetwork";
 import "./Styles.css";
 
 export const Contact = () => {
@@ -27,7 +28,7 @@ export const Contact = () => {
 
 					<div className="row">
 						<div className="col">
-							<h1>Holaaaaa</h1>
+							<SocialNetwork />
 						</div>
 					</div>
 				</div>
