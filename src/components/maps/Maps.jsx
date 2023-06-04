@@ -27,8 +27,7 @@ const ResetCenterView = (props) => {
 	}, [selectedPosition]);
 };
 
-export const Maps = (props) => {
-	const { selectedPosition } = props;
+export const Maps = ({ selectedPosition }) => {
 	const locationPosition = [selectedPosition?.lat, selectedPosition?.lon];
 	return (
 		<MapContainer

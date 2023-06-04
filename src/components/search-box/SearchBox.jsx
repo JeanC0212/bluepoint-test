@@ -1,19 +1,25 @@
 import React, { useState } from "react";
 import { Divider, OutlinedInput } from "@mui/material";
 import Button from "@mui/material/Button";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
+import { ListPlace } from "../list-place/ListPlace";
 
 const NOMINATIM_BASE_URL = "https://nominatim.openstreetmap.org/search?";
 
-export const SearchBox = (props) => {
-	const { selectedPosition, setSelectedPosition } = props;
+export const SearchBox = ({ setSelectedPosition }) => {
 	const [searchText, setSearchText] = useState("");
 	const [listPlace, setListPlace] = useState([]);
-	console.log(searchText);
+
+	const onInputChange = ({ target }) => {
+		setSearchText(target.value);
+	};
+
+	const params = {
+		q: searchText,
+		format: "json",
+		adressdetails: 1,
+		polygon_geojson: 0,
+	};
+
 	return (
 		<div style={{ display: "flex", flexDirection: "column" }}>
 			<div style={{ display: "flex" }}>
@@ -21,9 +27,8 @@ export const SearchBox = (props) => {
 					<OutlinedInput
 						style={{ width: "100%" }}
 						value={searchText}
-						onChange={(event) => {
-							setSearchText(event.target.value);
-						}}
+						onChange={onInputChange}
+						placeholder="Search a location"
 					/>
 				</div>
 				<div
@@ -32,12 +37,6 @@ export const SearchBox = (props) => {
 					<Button
 						variant="contained"
 						onClick={() => {
-							const params = {
-								q: searchText,
-								format: "json",
-								adressdetails: 1,
-								polygon_geojson: 0,
-							};
 							const queryString = new URLSearchParams(params).toString();
 							const requestOptions = {
 								method: "GET",
@@ -46,7 +45,6 @@ export const SearchBox = (props) => {
 							fetch(`${NOMINATIM_BASE_URL}${queryString}`, requestOptions)
 								.then((response) => response.text())
 								.then((result) => {
-									console.log(JSON.parse(result));
 									setListPlace(JSON.parse(result));
 								})
 								.catch((error) => {
@@ -60,28 +58,13 @@ export const SearchBox = (props) => {
 			</div>
 			<div>
 				<nav aria-label="main mailbox folders">
-					{listPlace.map((place) => {
+					{listPlace.map((place, index) => {
 						return (
-							<List key={place?.osm_id}>
-								<ListItem
-									disablePadding
-									onClick={() => {
-										setSelectedPosition(place);
-									}}
-								>
-									<ListItemButton>
-										<ListItemIcon>
-											<img
-												src="./placeholder.png"
-												alt="placeholder"
-												style={{ width: "38px", height: "38px" }}
-											/>
-										</ListItemIcon>
-										<ListItemText primary={place?.display_name} />
-									</ListItemButton>
-								</ListItem>
-								<Divider />
-							</List>
+							<ListPlace
+								setSelectedPosition={setSelectedPosition}
+								place={place}
+								key={index}
+							/>
 						);
 					})}
 				</nav>
