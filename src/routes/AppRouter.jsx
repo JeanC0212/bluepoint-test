@@ -2,7 +2,8 @@ import React from "react";
 import { Redirect, Route, Router } from "wouter";
 import { Home } from "../pages/Home";
 import { Navbar } from "../components/navbar/Navbar";
-import { Contact } from "../pages/Contact";
+import { Contact } from "../pages/contact/Contact";
+
 
 export const AppRouter = () => {
 	return (

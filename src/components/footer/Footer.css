@@ -1,0 +1,38 @@
+.footer{
+    padding: 40px 20px;
+    background-color: #242323;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .links a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.footer .links a{
+    border-right: 1px solid #fff;
+    margin-bottom: 40px;
+}
+
+.footer .links a:last-child{
+    border-right: 0 !important;
+}
+
+.copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
