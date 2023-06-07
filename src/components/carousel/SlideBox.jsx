@@ -1,16 +1,22 @@
-export const SlideBox = () => {
+import { useEffect } from "react";
+import "./Carousel.css";
+
+export const SlideBox = ({ description, img, alink, url }) => {
+	useEffect(() => {}, []);
+
 	return (
-		<div className="">
-			<div className="row">
-				<div className="col-6">
-					<h4>hola</h4>
-					<p>description</p>
-				</div>
-				<div className="col-6">
-					<img
-						src="https://static.wixstatic.com/media/c86aa8_3487b37b109e405083ecf2ea5bdd0ef4~mv2.png/v1/fill/w_579,h_420,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Admission%20time%20graphic.png"
-						alt=""
-					/>
+		<div className="box-container">
+			<div style={{ background: "#3ba791cc" }}>
+				<div className="boxing">
+					<div className="content">
+						<h4>In the News</h4>
+						<p>{description}</p>
+						<a href={url}>{alink}</a>
+					</div>
+
+					<div className="content">
+						<img src={img} alt="" />
+					</div>
 				</div>
 			</div>
 		</div>

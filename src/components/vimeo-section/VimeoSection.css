@@ -22,13 +22,6 @@
     padding: 20px;
 }
 
-.content img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
 .content-text {
     display: flex;
     justify-content: center;

@@ -20,6 +20,7 @@ export const SectionDescription = ({
 			<div
 				className="bg-color-section"
 				style={{
+					color: texColor,
 					backgroundColor: bgColor,
 				}}
 			>

@@ -3,7 +3,7 @@ import { Redirect, Route, Router } from "wouter";
 import { Home } from "../pages/Home";
 import { Navbar } from "../components/navbar/Navbar";
 import { Contact } from "../pages/contact/Contact";
-
+import Footer from "../components/footer/Footer";
 
 export const AppRouter = () => {
 	return (
@@ -18,6 +18,7 @@ export const AppRouter = () => {
 				<Route path="/contact-us" component={Contact} />
 				<Route path="*" component={() => <h1>404</h1>} />
 			</Router>
+			<Footer />
 		</div>
 	);
 };

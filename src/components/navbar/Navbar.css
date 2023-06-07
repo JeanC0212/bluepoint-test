@@ -31,9 +31,15 @@ nav button:focus{
     
 } 
 
+.center{
+    display: flex;
+    justify-content: center;
+}
+
 .navbar .nav-item{
     padding: 0 10px;
-    border-right: 1px solid red;
+    border-right: 1px solid grey;
+
 }
 
 .navbar .nav-item:last-child{

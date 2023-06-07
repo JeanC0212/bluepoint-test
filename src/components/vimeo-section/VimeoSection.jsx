@@ -1,27 +1,34 @@
-import React from 'react'
+import React from "react";
+import "./VimeoSection.css";
 
 export default function VimeoSection() {
-  return (
-    <div className="container my-4">
-        <div className="row">
-            <div className="col-md-8">
-                <iframe 
-                width="872px"
-                height="314px"
-                src="https://player.vimeo.com/video/386648582?h=28677dd262&amp;title=0&amp;app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="NAVI Introduction and Overview" data-ready="true"></iframe>
-            </div>
-            
-            <div className="col-md-4">
+	return (
+		<div className="box-container">
+			<div style={{ background: "#3ba791cc" }}>
+				<div className="boxing">
+					<div className="content">
+						<iframe
+							width="100%"
+							height="314px"
+							src="https://player.vimeo.com/video/386648582?h=28677dd262&amp;title=0&amp;app_id=122963"
+							frameborder="0"
+							allow="autoplay; fullscreen; picture-in-picture"
+							allowfullscreen=""
+							title="NAVI Introduction and Overview"
+							data-ready="true"
+						></iframe>
+					</div>
 
-                <h4>
-                Watch this short video to learn how NAVI can help your organization.
-                </h4>
+					<div className="content content-text">
+						<h4>
+							Watch this short video to learn how NAVI can help your
+							organization.
+						</h4>
 
-                <button className="btn btn-primary">
-                    Request a live demo
-                </button>
-            </div>
-        </div>
-    </div>
-  )
+						<a href="https://www.bluepoint2.com/demo">Request a live demo</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }

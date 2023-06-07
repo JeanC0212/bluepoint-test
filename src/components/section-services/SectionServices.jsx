@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import "./SectionGrid.css";
-export const SectionGrid = ({
+import "./SectionServices.css";
+export const SectionServices = ({
 	bgImage,
 	title,
 	description,
@@ -12,15 +12,14 @@ export const SectionGrid = ({
 	useEffect(() => {
 		boxDescription.current.innerHTML = description;
 	}, []);
-
 	return (
 		<div className="sectionGrid" style={{ backgroundImage: `url(${bgImage})` }}>
 			<div className="container section">
 				<div className="row">
-					<div className="col info">
-						<h1 className="titleGrid">{title}</h1>
-						{subtitle && <p> {subtitle} </p>}
-						<div className="titleGrid" ref={boxDescription}></div>
+					<div className="col">
+						<h3 className="titleGrid">{title}</h3>
+						{subtitle && <h5> {subtitle} </h5>}
+						<div className="descriptionGrid" ref={boxDescription}></div>
 					</div>
 					<div className="col"></div>
 				</div>
