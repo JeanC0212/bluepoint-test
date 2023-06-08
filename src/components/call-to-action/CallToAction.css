@@ -1,0 +1,14 @@
+.call-container {
+    height: 150px;
+   background-color: #2B388C;
+}
+
+.Callcontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding: 20px;
+    padding-top: 50px;
+}

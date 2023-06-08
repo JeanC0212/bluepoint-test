@@ -9,8 +9,6 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
-
-import "./Carousel.css";
 import { SlideBox } from "./SlideBox";
 
 export const Carousel = ({ bgColor, title, description }) => {

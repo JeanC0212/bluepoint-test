@@ -1,12 +1,13 @@
-import React from "react";
-import { SectionDescription } from "../components/section-description/SectionDescription";
-import { SectionGrid } from "../components/section-grid/SectionGrid";
-import { Carousel } from "../components/carousel/Carousel";
-import SocialNetwork from "../components/social-network/SocialNetwork";
-import VimeoSection from "../components/vimeo-section/VimeoSection";
-import Footer from "../components/footer/Footer";
-import { SectionServices } from "../components/section-services/SectionServices";
-
+import {
+	Carousel,
+	CallToAction,
+	SocialNetwork,
+	VimeoSection,
+	SectionServices,
+	SectionProviders,
+	SectionDescription,
+	SectionGrid,
+} from "../components/components.js";
 export const Home = () => {
 	return (
 		<div className="page-margin">
@@ -45,6 +46,15 @@ export const Home = () => {
 				icon="https://static.wixstatic.com/media/c86aa8_fb7bd5fa000f4ba9ae7526484109561f~mv2.png/v1/fill/w_75,h_73,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/AdobeStock_258163476-communication-modif.png"
 				title="Better communication starts with NAVI"
 				description="NAVI allows patients to navigate their healthcare appointments and communicate with their care providers from any mobile device."
+			/>
+
+			<CallToAction text="Healthcare communication for a mobile world" />
+
+			<SectionProviders
+				title="Healthcare providers are increasingly adopting mobile messaging."
+				description="More people than ever prefer communicating through mobile messaging, especially when it comes to healthcare information. Care providers can use texting to communicate with patients in a more personal way through all the key touchpoints of the patient journey. "
+				text="Increased online patient involvement can result in a 90% satisfaction rate for both patients and physicians."
+				img="https://static.wixstatic.com/media/c86aa8_6024232ebe564e07b91410ffc3c4f8ad~mv2.png/v1/fill/w_374,h_372,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/90%25-circle-graphic.png"
 			/>
 
 			<VimeoSection />

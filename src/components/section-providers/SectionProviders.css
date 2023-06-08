@@ -5,15 +5,22 @@
     background-size: cover !important;
 }
 
-.boxing {
+.titleProvider{
+    display: flex;
+    justify-content: center;
+    padding-top: 78px;
+    color: white;
+}
+
+.boxingProviders {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     width: 60%;
-    margin: 0 20%;
+    margin: -40px 20%;
     height: 500px;
 }
 
-.content {
+ .content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,23 +30,5 @@
 }
 
 .content img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.content-text {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.content a {
-    color: #fff;
-    text-decoration: none;
-    border: 1px solid #fff;
-    padding: 10px 20px;
-    border-radius: 40px;
-    margin-top: 20px;
+    width: 80%;
 }

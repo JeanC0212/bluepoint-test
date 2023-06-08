@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "./Carousel.css";
 
 export const SlideBox = ({ description, img, alink, url }) => {
 	useEffect(() => {}, []);
